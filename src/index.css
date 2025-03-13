@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* HTML elementlerinin varsayılan stillerini belirler
+@tailwind classlarını kullanmamızı sağlar
+@layer base{
+h1{
+@apply text-black....
+}
+}
+
+
+*/
+@layer base {
+  input {
+    @apply text-black bg-white rounded mt-1 p-2 outline-none shadow-lg focus:shadow-[gray];
+  }
+}
