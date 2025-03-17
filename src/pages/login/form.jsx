@@ -12,7 +12,7 @@ const Form = () => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -51,18 +51,18 @@ const Form = () => {
           Şifreni mi unuttun ?
         </p>
         <button className="mt-10 bg-white text-black rounded-full p-1 font-bold transition hover:bg-gray-300 cursor-pointer">
-          {!isSignUp ? "Giriş Yap" : "Kayıt Ol"}
+          {isSignUp ? "Giriş Yap" : "Kayıt Ol"}
         </button>
       </form>
       <p className="mt-5">
         <span className="text-gray-500">
-          {isSignUp ? "Hesabınız yoksa" : "Hesabınız varsa"}
+          {!isSignUp ? "Hesabınız varsa" : "Hesabınız yoksa"}
         </span>
         <span
           onClick={() => setIsSignUp(!isSignUp)}
           className="text-blue-400 cursor-pointer ms-2"
         >
-          {isSignUp ? "Giriş Yap" : "Kayıt Ol"}
+          {!isSignUp ? "Giriş Yap" : "Kayıt Ol"}
         </span>
       </p>
 

@@ -9,7 +9,7 @@ const Login = () => {
         <div className="flex justify-center">
           <img src="../../public/x-logo.webp" alt="x-Logo" className="h-[60px]" />
         </div>
-        <h1 className="text-white text-xl font-bold">Twitter'a giriş yap</h1>
+        <h1 className="text-white text-center text-xl font-bold">Twitter'a giriş yap</h1>
 
         <GoogleButton />
         <Form />

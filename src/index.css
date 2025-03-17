@@ -15,3 +15,9 @@ h1{
     @apply text-black bg-white rounded mt-1 p-2 outline-none shadow-lg focus:shadow-[gray];
   }
 }
+
+/* ANASAYFANIN GRİD DÜZENİ */
+.feed {
+  display: grid;
+  grid-template-columns: 1fr minmax(400px, 600px) 1fr;
+}

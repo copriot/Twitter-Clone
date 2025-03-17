@@ -1,6 +1,7 @@
 import React from "react";
 import { IoMdClose } from "react-icons/io";
 
+//High Order Component olarak projedeki modalların ortak noktalarını belirledik
 const Modal = ({ children, isOpen, close }) => {
   return (
     isOpen && (
