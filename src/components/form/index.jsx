@@ -1,11 +1,13 @@
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import React from "react";
+import React, { useState } from "react";
 import { BsCardImage } from "react-icons/bs";
 import { toast } from "react-toastify";
 import { db } from "../../firebase";
 import uploadToStorage from "../../firebase/uploadStorage";
+import Loader from "../loader";
 
 const Form = ({ user }) => {
+  const [isLoading, setIsLoading] = useState();
   const handleSubmit = async (e) => {
     console.log(e);
     e.preventDefault();
@@ -15,6 +17,7 @@ const Form = ({ user }) => {
     const file = e.target[1].files[0];
     //2)yazı ve resim içeriği yoksa fonk. durdur
     if (!text && !file) return toast.warning("Lütfen içerik giriniz");
+    setIsLoading(true);
     //3) resmi storage'a kaydet
     const url = await uploadToStorage(file);
     //4)kolleksiyonun referansını al
@@ -32,7 +35,9 @@ const Form = ({ user }) => {
       },
       createdAt: serverTimestamp(),
     });
+    setIsLoading(false);
     //6 formu sıfırla
+    e.target.reset();
   };
   return (
     <form onSubmit={handleSubmit} className="border-b border-zinc-600 p-5 flex gap-3">
@@ -60,8 +65,11 @@ const Form = ({ user }) => {
             <BsCardImage />
           </label>
           <input id="file-upload" type="file" className="hidden" />
-          <button className="bg-blue-600 py-2 rounded-full min-w-[85px] min-h-[40px] transition hover:bg-blue-800 cursor-pointer">
-            Tweetle
+          <button
+            disabled={isLoading}
+            className="bg-blue-600 py-2 rounded-full min-w-[85px] min-h-[40px] transition hover:bg-blue-800 cursor-pointer"
+          >
+            {isLoading ? <Loader /> : "Tweetle"}
           </button>
         </div>
       </div>

@@ -27,5 +27,4 @@ export const provider = new GoogleAuthProvider();
 export const db = getFirestore(app);
 
 //medya depolama alanı refaransını al
-
-export const storage = getStorage(app);
+export const storage = getStorage();

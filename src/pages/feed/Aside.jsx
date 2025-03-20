@@ -1,6 +1,6 @@
 import React from "react";
 
-console.log("asidee render oldu");
+//console.log("asidee render oldu");
 const Aside = () => {
   return <div className="max-xl:hidden">Aside</div>;
 };

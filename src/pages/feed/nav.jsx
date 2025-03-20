@@ -4,7 +4,7 @@ import { BiSolidDoorOpen } from "react-icons/bi";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase/index";
 const Nav = ({ user }) => {
-  console.log(user);
+  //console.log(user);
   return (
     <nav className="flex flex-col justify-between items-end px-2 py-4">
       <div>
@@ -27,7 +27,7 @@ const Nav = ({ user }) => {
       ) : (
         <div className="flex flex-col justify-center items-center gap-5">
           <div className="flex flex-col items-center gap-2">
-            <img src={user.photoURL} alt="user" className="rounded-full max-w-[45px]" />
+            <img src={user?.photoURL} alt="user" className="rounded-full max-w-[45px]" />
             <p className="max-md:hidden">{user.displayName.toUpperCase()}</p>
           </div>
           <button
