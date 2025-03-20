@@ -1,4 +1,4 @@
-import Buttons from "./Buttons";
+import Buttons from "./buttons";
 import Content from "./content";
 import DropDown from "./dropDown";
 import UserInfo from "./userInfo";
