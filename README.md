@@ -23,3 +23,7 @@
 - Oturumu açık kullanıcılar: Feed sayfasına erişebilir.
 
 - Admin olan kullanıcılar: Admin sayfasına erişebilir.
+
+# Ekran Görüntüsü
+
+![](giff.gif)

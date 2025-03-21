@@ -6,7 +6,7 @@ import Loader from "../../components/loader";
 import Post from "../../components/post";
 
 const Main = ({ user }) => {
-  const [tweets, setTweets] = useState();
+  const [tweets, setTweets] = useState(null);
   useEffect(() => {
     //verilerin alınacağı kolleksiyon referansını al
     const ref = collection(db, "tweets");
@@ -29,8 +29,6 @@ const Main = ({ user }) => {
   //  console.log(tweets);
   return (
     <main className="border border-zinc-600 overflow-y-auto">
-      <header className="border-b border-b-zinc-600 p-4 font-bold">Anasayfa</header>
-
       <Form user={user} />
       {!tweets ? (
         <div className="my-20 scale-200">

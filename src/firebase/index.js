@@ -5,12 +5,12 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: "AIzaSyDCcrXtvYT4HxAkNCBi_c05DNVnsvUdsadsafsFbGSo",
+  authDomain: "twitter-clone-7b49b.FSAFDSAFSAfsda.com",
+  projectId: "twitter-clone-fsafsafas",
+  storageBucket: "twitter-clone-7b49b.fsafsafsa.app",
+  messagingSenderId: "fsafsafsafsafsafaf",
+  appId: "1:363780166935:web:9fsafsafsa9a96a8afb03fe1113d352",
 };
 
 // Initialize Firebase
@@ -27,4 +27,4 @@ export const provider = new GoogleAuthProvider();
 export const db = getFirestore(app);
 
 //medya depolama alanı refaransını al
-export const storage = getStorage();
+export const storage = getStorage;
