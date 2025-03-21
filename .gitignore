@@ -25,4 +25,4 @@ dist-ssr
  
 
 # Ortam değişkenlerini gizle
-.local
+.env
